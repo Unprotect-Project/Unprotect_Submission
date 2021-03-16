@@ -3,7 +3,7 @@ The Unprotect project is an open-source database that aims to classify malware e
 
 This project is community-centric so that everyone can contribute to the database. The purpose of this repository is to provide a simple way for the community to contribute to the project. For each contributor, we will add your name in the [contributor's section](https://search.unprotect.it/about/). 
 
-Before writing a proposal, we recommend that you review an [example](https://search.unprotect.it/technique/kill-process/)
+Before writing a proposal, we recommend that you review an [example](https://search.unprotect.it/technique/kill-process/).
 
 To add a technique, you can fork this repository, create a folder containing the name of the technique, and add the details. You have a sample model available [here](https://github.com/fr0gger/Unprotect_Submission/tree/main/techniques/template_description). Once you've added your technique, you can PR.
 
