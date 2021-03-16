@@ -5,7 +5,7 @@ This project is community-centric so that everyone can contribute to the databas
 
 Before writing a proposal, we recommend that you review an [example](https://search.unprotect.it/technique/kill-process/).
 
-To add a technique, you can fork this repository, create a folder containing the name of the technique, and add the details. You have a sample model available [here](https://github.com/fr0gger/Unprotect_Submission/tree/main/techniques/template_description). Once you've added your technique, you can PR.
+To add a technique, you can fork this repository, create a folder in the [techniques section](https://github.com/fr0gger/Unprotect_Submission/tree/main/techniques) containing the name of the technique, and add the details. You have a sample model available [here](https://github.com/fr0gger/Unprotect_Submission/tree/main/techniques/template_description). Once you've added your technique, you can PR.
 
 More details on the process of adding, modifying, or updating a technique can be found below.
 
