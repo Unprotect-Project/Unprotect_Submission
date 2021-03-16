@@ -1,7 +1,13 @@
-# Unprotect Submission
-The Unprotect Project is an open-source database that aims to classify the malware evasion techniques to strenghten the security in place but also understand how malware can bypass security mechanisms. This is also a handy resource for red teamer. For every contributors we will add your name in the contributor section [here](https://search.unprotect.it/about/). 
+# Unprotect Contribution
+The Unprotect Project is an open-source database that aims to classify the malware evasion techniques to strenghten the security in place but also understand how malware can bypass security mechanisms. This is also a handy resource for red teamer. 
 
-This project is community centric so everyone can contribute to the database. 
+This project is community centric so everyone can contribute to the database. The goal of this repository is to propose a simple way to the community to contribute to the project. For every contributors we will add your name in the contributor section [here](https://search.unprotect.it/about/). 
+
+Before writing a proposal, we recommend to have a look to one example [here](https://search.unprotect.it/technique/kill-process/)
+
+To add a technique you can fork this repository, create folder including the technique name and add the details. You have a template example available [here](https://github.com/fr0gger/Unprotect_Submission/tree/main/techniques/template_description). Once you added your technique you can PR it.
+
+You will find more details of the process to add, modify or update a techniques. 
 
 ## Adding a new technique to the database
 To contribute you can send a pull request to this repository containing the technique title in the PR and including the following elements:
