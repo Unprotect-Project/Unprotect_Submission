@@ -1,16 +1,16 @@
 # Unprotect Contribution
-The Unprotect Project is an open-source database that aims to classify the malware evasion techniques to strenghten the security in place but also understand how malware can bypass security mechanisms. This is also a handy resource for red teamer. 
+The Unprotect project is an open-source database that aims to classify malware evasion techniques to strengthen the security in place, but also to understand how malware can bypass security mechanisms. This is a handy resource for the red, blue, and purple teamer.
 
-This project is community centric so everyone can contribute to the database. The goal of this repository is to propose a simple way to the community to contribute to the project. For every contributors we will add your name in the contributor section [here](https://search.unprotect.it/about/). 
+This project is community-centric so that everyone can contribute to the database. The purpose of this repository is to provide a simple way for the community to contribute to the project. For each contributor, we will add your name in the [contributor's section](https://search.unprotect.it/about/). 
 
-Before writing a proposal, we recommend to have a look to one example [here](https://search.unprotect.it/technique/kill-process/)
+Before writing a proposal, we recommend that you review an [example](https://search.unprotect.it/technique/kill-process/)
 
-To add a technique you can fork this repository, create folder including the technique name and add the details. You have a template example available [here](https://github.com/fr0gger/Unprotect_Submission/tree/main/techniques/template_description). Once you added your technique you can PR it.
+To add a technique, you can fork this repository, create a folder containing the name of the technique, and add the details. You have a sample model available [here](https://github.com/fr0gger/Unprotect_Submission/tree/main/techniques/template_description). Once you've added your technique, you can PR.
 
-You will find more details of the process to add, modify or update a techniques. 
+More details on the process of adding, modifying, or updating a technique can be found below.
 
 ## Adding a new technique to the database
-To contribute you can send a pull request to this repository containing the technique title in the PR and including the following elements:
+To contribute, you can send a pull request to this repository containing the title of the technique in the PR and including the following. You can also have a look to the [template description](https://github.com/fr0gger/Unprotect_Submission/blob/main/techniques/template_description/description_template.md).
 
 1 - Authorship information 
 * Name or Pseudo (required)
@@ -20,26 +20,26 @@ To contribute you can send a pull request to this repository containing the tech
 * Email address (not required)
 
 2 - Technique Information (required)
-Every submission must include several information to be reviewed:
-* Technique title (required): the techniques you want to add with minimal words
-* Technique category (required): add the category where your technique rely. Check the list [here](https://search.unprotect.it/map)
-* Technique description (required): include as most as possible detail about your technique. Don't worry about the grammar, the Unprotect team will review the submission. 
-* Additional ressources: include any additional resources that are relevant to the techniques.
+Each submission should include several pieces of information to be reviewed:
+* Technique title (required): the techniques you want to add with a minimum of words
+* Technique category (required): add the category on which your technique is based. Check the [list](https://search.unprotect.it/map)
+* Technique description (required): iInclude as much detail as possible about your technique. Don't worry about grammar, the Unprotect team will review the submission.
+* Additional ressources: include any additional resources relevant to the techniques.
 
 3 - Code snippet (not required but higly recommended)
-* For each techniques in the database we try to document it with a working POC. It is higly recommended to add it if you have it. The Unprotect team will review and test the code. 
-* The code can be written in any languages (C/C++, Python, Golang, Powershell, ASM, Delphi...)
-* You can add a small description on the top to mention any specific information such as library required to work. 
-* If you reuse the code from somewhere else, please add a comment at the beginning of your code that includes the original source.
+* For each technique in the database, we try to document it with a functional POC. It is highly recommended to add it if you have it. The Unprotect team will review and test the code.
+* Code can be written in any language (C/C++, Python, Golang, Powershell, ASM, Delphi...)
+* You can add a small description at the top to mention any specific information such as the library required to run.
+* If you are reusing the code from elsewhere, please add a comment at the beginning of your code that includes the original source.
 
 4 - Detection Rules (not required but higly recommended)
-The detection rules part is particularly important to help the community to defend against those techniques. While it is not always possible to create a detection rules, we highly encourage to do your best to add them. 
-* Yara rules: Please add the yara rules related to your techniques. If it is your add your name in the meta otherwise keep the original authorship. 
-* Sigma rules: Please add the sigma rules related to your techniques. If it is your add your name in the meta otherwise keep the original authorship. 
-* Capa rukes: Please add the sigma rules related to your techniques. If it is your add your name in the meta otherwise keep the original authorship.
+The detection rules part is particularly important to help the community defend itself against these techniques. Although it is not always possible to create detection rules, we strongly encourage you to do your best to add them.
+* Yara rules: Please add the yara rules related to your technique. If it's yours, add your name in the meta, otherwise keep the original authorship.
+* Sigma rules: Please add the sigma rules related to your technique. If it's yours, add your name in the meta, otherwise keep the original authorship.
+* Capa rukes: Please add the sigma rules related to your technique.If it's yours, add your name in the meta, otherwise keep the original authorship.
 
 ## Modifying a techniques 
-Sometimes you might have more details in a specific techniques or you might notice an error somewhere. You might also have a code snippets or a detection rules. 
+Sometimes you may have more details on a specific technique or you may notice an error somewhere. You can also have snippets or detection rules.
 
 Please add your modification including the following information:
 
@@ -54,10 +54,12 @@ Please add your modification including the following information:
 5 - Detection rules (if you have it) 
 
 ## Thanks for your contribution!
-We created this project to help the infosec community. We hope that you like it as we put a lot of effort to it. We have more work in the pipe and if you are interested about it, we recommend you to stay up to date about furture releases by following us: 
+We created this project to help the infosec community. We hope you like it because we put a lot of effort into it. We have more work in the pipeline and if you're interested, we recommend that you stay on top of future releases by following us:
 
 * Thomas Roccia [fr0gger_](https://twitter.com/fr0gger_)
 * Jean-Pierre Lesueur [darkcodersc](https://twitter.com/DarkCoderSc)
 
-You can also send us greeting if you like this project. <3 
+In the future, we would like to thank our contributors and we are planning some goodies. ;) 
+
+You can also send greetings to us if you like this project. <3 
 
