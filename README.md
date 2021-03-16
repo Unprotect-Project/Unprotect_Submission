@@ -1,4 +1,4 @@
-# Unprotect Contribution
+# How to contribute to the Unprotect Project?
 The Unprotect project is an open-source database that aims to classify malware evasion techniques to strengthen the security in place, but also to understand how malware can bypass security mechanisms. This is a handy resource for the red, blue, and purple teamer.
 
 This project is community-centric so that everyone can contribute to the database. The purpose of this repository is to provide a simple way for the community to contribute to the project. For each contributor, we will add your name in the [contributor's section](https://search.unprotect.it/about/). 
