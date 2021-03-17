@@ -1,11 +1,11 @@
-# <NAME OF YOUR TECHNIQUE>
+# *NAME OF YOUR TECHNIQUE*
 
 ## Authorship information
-* Name or nickname: <myname>
-* Twitter: https://twitter.com/<yourhandle>
+* Name or nickname (required): *myname*
+* Twitter: https://twitter.com/*yourhandle*
 * Website: yourwebsite[.]com
-* Linkedin: <yourlinkedinprofile>
-* Email: <youremail@yes.com>
+* Linkedin: *yourlinkedinprofile*
+* Email: *youremail@yes.com*
   
 ## Technique Information
 * Technique title (required): (e.g: SuspendThread)
