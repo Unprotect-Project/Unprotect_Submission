@@ -1,4 +1,4 @@
-# NAME OF YOUR TECHNIQUE
+# <NAME OF YOUR TECHNIQUE>
 
 ## Authorship information
 * Name or nickname: <myname>
