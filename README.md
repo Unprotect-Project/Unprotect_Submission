@@ -38,7 +38,7 @@ The detection rules part is particularly important to help the community defend 
 * Sigma rules: Please add the sigma rules related to your technique. If it's yours, add your name in the meta, otherwise keep the original authorship.
 * Capa rukes: Please add the sigma rules related to your technique.If it's yours, add your name in the meta, otherwise keep the original authorship.
 
-## Modifying a techniques 
+## Modifying a technique 
 Sometimes you may have more details on a specific technique or you may notice an error somewhere. You can also have snippets or detection rules.
 
 Please add your modification including the following information:
