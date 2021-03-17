@@ -1,4 +1,4 @@
-# Template Unprotect Techniques
+# NAME OF YOUR TECHNIQUE
 
 ## Authorship information
 * Name or nickname: <myname>
