@@ -13,7 +13,7 @@
 * Technique description (required): The kernel32 SuspendThread function or the NTDLL NtSuspendThread function can be another very effective way to disable user-mode debuggers. This can be achieved by enumerating the threads of a given process, or searching for a named window and opening its owner thread, and then suspending that thread.
 
 ## Additional resources
-* Add any external link that can provide further indication of the technique.
+* Add any external links that can provide further information of the technique.
 
 ## Code snippets
 * Please add your code in separate files.
