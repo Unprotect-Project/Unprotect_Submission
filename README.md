@@ -56,8 +56,8 @@ Please add your modification including the following information:
 ## Thanks for your contribution!
 We created this project to help the infosec community. We hope you like it because we put a lot of effort into it. We have more work in the pipeline and if you're interested, we recommend that you stay on top of future releases by following us:
 
-* Thomas Roccia [fr0gger_](https://twitter.com/fr0gger_)
-* Jean-Pierre Lesueur [darkcodersc](https://twitter.com/DarkCoderSc)
+* Thomas Roccia [@fr0gger_](https://twitter.com/fr0gger_)
+* Jean-Pierre Lesueur [@darkcodersc](https://twitter.com/DarkCoderSc)
 
 In the future, we would like to thank our contributors and we are planning some goodies. ;) 
 
