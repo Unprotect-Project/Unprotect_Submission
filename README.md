@@ -61,5 +61,5 @@ We created this project to help the infosec community. We hope you like it becau
 
 In the future, we would like to thank our contributors and we are planning some goodies. ;) 
 
-**You can also send greetings to us if you like this project. <3 **
+**You can also send greetings to us if you like this project. <3**
 
