@@ -26,13 +26,13 @@ Each submission should include several pieces of information to be reviewed:
 * Technique description (required): iInclude as much detail as possible about your technique. Don't worry about grammar, the Unprotect team will review the submission.
 * Additional ressources: include any additional resources relevant to the techniques.
 
-### 3 - Code snippet (not required but higly recommended)
+### 3 - Code snippet (not required but highly recommended)
 * For each technique in the database, we try to document it with a functional POC. It is highly recommended to add it if you have it. The Unprotect team will review and test the code.
 * Code can be written in any language (C/C++, Python, Golang, Powershell, ASM, Delphi...)
 * You can add a small description at the top to mention any specific information such as the library required to run.
 * If you are reusing the code from elsewhere, please add a comment at the beginning of your code that includes the original source.
 
-### 4 - Detection Rules (not required but higly recommended)
+### 4 - Detection Rules (not required but highly recommended)
 The detection rules part is particularly important to help the community defend itself against these techniques. Although it is not always possible to create detection rules, we strongly encourage you to do your best to add them.
 * Yara rules: Please add the yara rules related to your technique. If it's yours, add your name in the meta, otherwise keep the original authorship.
 * Sigma rules: Please add the sigma rules related to your technique. If it's yours, add your name in the meta, otherwise keep the original authorship.
