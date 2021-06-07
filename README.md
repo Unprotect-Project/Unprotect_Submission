@@ -34,9 +34,9 @@ Each submission should include several pieces of information to be reviewed:
 
 ### 4 - Detection Rules (not required but highly recommended)
 The detection rules part is particularly important to help the community defend itself against these techniques. Although it is not always possible to create detection rules, we strongly encourage you to do your best to add them.
-* Yara rules: Please add the yara rules related to your technique. If it's yours, add your name in the meta, otherwise keep the original authorship.
-* Sigma rules: Please add the sigma rules related to your technique. If it's yours, add your name in the meta, otherwise keep the original authorship.
-* Capa rules: Please add the sigma rules related to your technique.If it's yours, add your name in the meta, otherwise keep the original authorship.
+* Yara rules: Please add the Yara rules related to your technique. If it's yours, add your name in the meta, otherwise keep the original authorship.
+* Sigma rules: Please add the Sigma rules related to your technique. If it's yours, add your name in the meta, otherwise keep the original authorship.
+* Capa rules: Please add the Capa rules related to your technique.If it's yours, add your name in the meta, otherwise keep the original authorship.
 
 ## Modifying a technique 
 Sometimes you may have more details on a specific technique or you may notice an error somewhere. You can also have snippets or detection rules.
