@@ -47,7 +47,7 @@ Please add your modification including the following information:
 
 ### 2 - Title of the techniques to modify
 
-### 3 - New Desccription (if required)
+### 3 - New Description (if required)
 
 ### 4 - Code snippet (if you have it)
 
