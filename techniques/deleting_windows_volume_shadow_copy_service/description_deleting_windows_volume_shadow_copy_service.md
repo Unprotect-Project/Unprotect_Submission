@@ -6,8 +6,10 @@
 * Linkedin: *https://www.linkedin.com/in/tatsuya-hasegawa-aa3279142/*
   
 ## Technique Information
-* Technique Title: Volume Shadow Copy Service (VSC,VSS) Deletion
-* Technique category: anti-forensic
+* Technique Title: **Volume Shadow Copy Service (VSC,VSS) Deletion**
+* Technique category: **anti-forensic**
+* MITRE ATT&CK category: **Impact::Inhibit System Recovery [T1490],  Defense Evasion::Indicator Removal on Host::File Deletion [T1070.004]**
+* MBC category: **Impact::Data Destruction::Delete Shadow Copies [E1485.m04]**
 * Technique description: Deleting Volume Shadow Copy makes the forensic investigation to be more difficult in terms of the recovery of previous artifact evidence. In addition, attackers using ransomware often delete VSCs not to be able to recover the original files of the encrypted files from VSCs. On the other hand, deleting by using vssadmin and wmic is on a file system level, the actual data remains in clusters. Thus it may be able to be recovered from VSC until other files overwrite the clusters.
 
 ### Well-Known techniques to delete VSC
