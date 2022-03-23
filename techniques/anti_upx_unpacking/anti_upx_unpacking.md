@@ -18,7 +18,7 @@ That is UPX reference structure is located at the end of the PE header and the h
 
 There are some methods to bypass unpacking by a tool like "upx -d" since a long time ago.
 
-One easy way is to change section names to different strings, this is the example. which the normals packed by UPX are "UPX0", "UPX1" .. and ".rsrc".
+One easy way is to change section names to different strings, this is the example. The normal section names packed by UPX are "UPX0", "UPX1" .. and ".rsrc".
 The unpack command "upx -d" raises this kind of exception of "CantUnpackException: file is possibly modified/hacked/protected; take care!" in this case and results in preventing from unpacking.
 
 ![section_name_tamper](./section_name_tamper.png) 
