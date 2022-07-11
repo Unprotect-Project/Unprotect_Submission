@@ -1,12 +1,9 @@
-// winternl.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-#pragma once
+// changeModuleNameRuntime.cpp : This file contains the 'main' function. Program execution begins and ends there.
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>
 #include <Windows.h>
 #include <Winternl.h>
-#include <string>
 
 typedef struct _MYPEB {
 	UCHAR InheritedAddressSpace;
