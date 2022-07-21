@@ -1,4 +1,4 @@
-DLL Search Order Hijacking in via `DnsFreeConfigStructure` function in the DLL `DNSAPI.dll` of the executable `nslookup.exe`. 
+DLL Search Order Hijacking via `DnsFreeConfigStructure` function in the DLL `DNSAPI.dll` of the executable `nslookup.exe`. 
 
 ```c
 #include <windows.h>
