@@ -1,4 +1,4 @@
-# Modify a DLL Export function name at runtime
+# Hijack Dynamic Address Resolution
 
 ## Authorship Information
 * Name: Alex Schwarz
