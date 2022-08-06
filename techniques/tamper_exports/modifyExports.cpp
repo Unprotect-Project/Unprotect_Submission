@@ -1,5 +1,4 @@
 #pragma comment(linker,"/export:FuncA=DLLExport.FunctionA,@1") 
-#pragma comment(linker,"/export:FuncB=ModifyExports.test,@2")
 
 #include <iostream>
 #include <Windows.h>
