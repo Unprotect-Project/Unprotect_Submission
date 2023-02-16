@@ -1,4 +1,4 @@
-# Tamper Dll Export Names & GetProcAddress Spoofing
+# Anti-Debugging: INT n, ret
 
 ## Authorship Information
 * Name: Alex Schwarz
