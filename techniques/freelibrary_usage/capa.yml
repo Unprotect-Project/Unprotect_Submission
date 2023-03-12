@@ -1,0 +1,19 @@
+rule:
+  meta:
+    name: API pattern detection for removing EDR/AV hooks
+    namespace: anti-analysis/anti-av
+    authors: 
+      - github.com/west-wind
+    scope: basic block
+    mbc:
+      - Defense Evasion::Disable or Evade Security Tools [F0004]
+    examples:
+      - 7cacd0b11497bcdd2db0ee3ae9580bdd:0x403ED2
+      - 7cacd0b11497bcdd2db0ee3ae9580bdd:0x403ED9
+  features:
+    - and:
+      - api: GetModuleHandleA
+      - api: FreeLibrary
+      - or:
+        - string: /(\w|\d)+\.dll/i
+          description: Regex match on AV/EDR dll name
