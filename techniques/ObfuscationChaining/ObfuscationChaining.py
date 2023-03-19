@@ -1,3 +1,5 @@
+#Originally from: https://github.com/wand3rlust/Niernen
+
 import random
 
 #Encode shellcode using XOR, ADD, SUB, ROL, and ROR
