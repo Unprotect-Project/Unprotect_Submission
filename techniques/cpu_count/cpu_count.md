@@ -1,3 +1,22 @@
+# *CPU Counting*
+
+## Authorship information
+* Nickname: *Edode*
+* Twitter: *https://twitter.com/Edode_*
+* Linkedin: *https://www.linkedin.com/in/clisandro*
+* Mastodon: *https://infosec.exchange/@edode*
+
+## Technique Information
+* Technique Title: **U1340 - CPU Counting**
+* Technique category: **Sandbox Evasion**
+* Technique description: Same as the already existing description !
+
+## Additional resources
+
+## Detection rules
+
+___
+***From the previous commit:***
 # Domain Fronting
 
 ## Authorship Information
