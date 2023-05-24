@@ -1,4 +1,4 @@
-# Technique Information
+# Process Ghosting
 
 ## Authorship Information
 * Name: 一半人生

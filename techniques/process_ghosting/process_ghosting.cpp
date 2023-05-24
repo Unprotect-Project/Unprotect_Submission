@@ -389,7 +389,7 @@ const bool InitFunction()
 	return true;
 }
 
-const DWORD ReadPlayloadData(const std::string& strFullPath, char*& strReadBuf)
+const DWORD ReadPayLoadData(const std::string& strFullPath, char*& strReadBuf)
 {
 	bool bRet = false;
 	HANDLE hFile = NULL; 
@@ -617,9 +617,9 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
-	// Read Playload to BufData
+	// Read Payload to BufData
 	char* pPayLoadData = nullptr;
-	const DWORD dwDataSize = ReadPlayloadData(sPayLoadPath, pPayLoadData);
+	const DWORD dwDataSize = ReadPayLoadData(sPayLoadPath, pPayLoadData);
 	if (!pPayLoadData) {
 		std::cout << "[-] Read Payload Data Failuer, Path: " << sPayLoadPath.c_str() << std::endl;
 		return 0;
