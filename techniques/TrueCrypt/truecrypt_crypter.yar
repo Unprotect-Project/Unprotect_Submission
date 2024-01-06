@@ -14,7 +14,7 @@ rule TrueCrypt_crypter {
         $s4_crpt1 = {40 C0 EE 04 [16] 48 83}
         $s4_crpt2 = {FA 20 [0-22] 48 83 FE 20}
         $a_crpt = {61 2E 6F 75 74 2E 65 78 65 00 5F 63 67}
-		$s_crpt = {6F 5F 64 75 6D 6D 79 5F 65 78 70 6F 72 74}
+	$s_crpt = {6F 5F 64 75 6D 6D 79 5F 65 78 70 6F 72 74}
 
     condition: 
         uint16(0) == 0x5A4D 
