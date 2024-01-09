@@ -16,8 +16,8 @@ rule PureCrypter
         $s5 = {28 ?? 00 00 ?? 6F ?? 00 00 0A 28 03 00 00 2B ?? 6F ?? 00 00 0A 28 ?? 00 00 2B} 
         
     condition:
-        filesize < 6MB and
-        4 of ($s*) and dotnet.number_of_resources > 0 and dotnet.number_of_resources < 2 and dotnet.resources[0].length > 300KB 
+        filesize < 6MB
+        and 4 of ($s*) and dotnet.number_of_resources > 0 and dotnet.number_of_resources < 2 and dotnet.resources[0].length > 300KB 
     
 }
 
