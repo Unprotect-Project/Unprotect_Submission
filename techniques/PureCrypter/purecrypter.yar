@@ -17,7 +17,7 @@ rule PureCrypter
         
     condition:
         filesize < 6MB and
-        4 of ($s*) and for any i in (0..dotnet.number_of_streams - 1):  (dotnet.streams[i].name == "#~") and dotnet.number_of_resources > 0 and dotnet.number_of_resources < 2 and dotnet.resources[0].length > 300KB 
+        4 of ($s*) and dotnet.number_of_resources > 0 and dotnet.number_of_resources < 2 and dotnet.resources[0].length > 300KB 
     
 }
 
@@ -44,8 +44,7 @@ rule PureCrypter_Core
         
     condition: 
         filesize < 5MB and
-        all of ($s*) and
-        for any i in (0..dotnet.number_of_streams - 1): (dotnet.streams[i].name == "#~")
+        all of ($s*) 
         and dotnet.number_of_resources > 4 and dotnet.number_of_resources < 6
         and 2 of ($nr*) and dotnet.assembly_refs[1].name contains "protobuf-net"
         and #cnct > 5 
