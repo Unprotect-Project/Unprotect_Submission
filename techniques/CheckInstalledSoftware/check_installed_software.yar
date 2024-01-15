@@ -11,6 +11,7 @@ rule check_installed_software {
     $u1 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall"
     $reg = "RegOpenKeyExA"
     $h = {68 (01|02) 00 00 80}
+
   condition:
     uint16(0) == 0x5A4D
     and for any i in (1..#u1) : ($d1 in (@u1[i] - 200..@u1[i] + 200))
