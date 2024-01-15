@@ -13,3 +13,4 @@
 
 ## Additional resources
 * https://unprotect.it/technique/checking-installed-software/
+* https://evasions.checkpoint.com/techniques/human-like-behavior.html
