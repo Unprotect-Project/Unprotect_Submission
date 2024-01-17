@@ -1,4 +1,4 @@
-# *Obfuscation Using Marshal Module*
+# *Obfuscation Using Python Marshal Module*
 ## Authorship information
 * Name or nickname (required): *RussianPanda*
 * Twitter: https://twitter.com/AnFam17
@@ -7,7 +7,7 @@
 * Email: *cyberninja956@gmail.com*
   
 ## Technique Information
-* Technique title (required): Obfuscation Using Marshal Module
+* Technique title (required): Obfuscation Using Python Marshal Module
 * Technique category (required): Data Obfuscation
 * The marshal module in Python serializes Python objects into a binary format, which is useful for saving program state or transmitting data efficiently. Malware developers can misuse it to conceal or obfuscate the malicious code, making it harder to analyze or detect malicious behavior
 
