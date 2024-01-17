@@ -16,4 +16,3 @@ rule susp_obf_py_marshal_module {
     condition:
         $s1 and any of ($t*) and filesize < 2MB
 }
-
