@@ -16,3 +16,5 @@ https://irfan-eternal.github.io/understanding-internals-of-smokeloader/#encrypte
 
 ## Code snippets
 ![Example](https://irfan-eternal.github.io/understanding-internals-of-smokeloader/stage2AfterFunctionDecryption.PNG)
+
+The above image Shows an Example of this Technique. The last call to 40131a is wrapper for decryption_function, which will cause the code to be re-encrypted
