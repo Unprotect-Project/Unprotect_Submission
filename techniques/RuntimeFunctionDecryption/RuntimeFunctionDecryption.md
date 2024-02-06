@@ -15,3 +15,4 @@
 https://irfan-eternal.github.io/understanding-internals-of-smokeloader/#encrypted-function-code
 
 ## Code snippets
+![Example](https://irfan-eternal.github.io/understanding-internals-of-smokeloader/stage2AfterFunctionDecryption.PNG)
