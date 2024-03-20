@@ -3,7 +3,7 @@ rule SI_CRYPT_hXOR_Jan24 : Crypter {
     meta:
         version = "1.0"
         date = "2024-01-04"
-        modified = "2024-01-04"
+        modified = "2024-01-18"
         status = "RELEASED"
         sharing = "TLP:CLEAR"
         source = "SECUINFRA Falcon Team"
@@ -14,11 +14,10 @@ rule SI_CRYPT_hXOR_Jan24 : Crypter {
         actor_type = "CRIMEWARE"
         reference = "https://github.com/akuafif/hXOR-Packer"
         hash = "7712186f3e91573ea1bb0cc9f85d35915742b165f9e8ed3d3e795aa5e699230f"
-        minimum_yara = "4.2.0"
+        minimum_yara = "2.0.0"
         best_before = "2025-01-04"
 
     strings:
-
         //This rule has been validated for the compression, encryption and compression+encryption modes of hXOR
 
         //Signature to locate the payload
@@ -45,6 +44,6 @@ rule SI_CRYPT_hXOR_Jan24 : Crypter {
         uint16(0) == 0x5A4D
         and uint16(0x28) != 0x0000 //IMAGE_DOS_HEADER.e_res2[0] contains offset for payload
         and $binSignature in (200000..filesize)
-        and ((any of ($s_*)) or (none of ($s_*)))
+        and for all of ($s_*): (# >= 0) //these strings are optional
         and 3 of ($aa_*)
 }
