@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  title: Unprotect API
+  version: 1.0.0
+paths:
+  /techniques/:
+    get:
+      summary: Get a list of techniques
+      responses:
+        '200':
+          description: A list of techniques
+
+  /categories/:
+    get:
+      summary: Get a list of categories
+      responses:
+        '200':
+          description: A list of categories
+
+  /snippets/:
+    get:
+      summary: Get a list of snippets
+      responses:
+        '200':
+          description: A list of snippets
+
+  /snippet_authors/:
+    get:
+      summary: Get a list of snippet authors
+      responses:
+        '200':
+          description: A list of snippet authors
+
+  /snippet_languages/:
+    get:
+      summary: Get a list of snippet languages
+      responses:
+        '200':
+          description: A list of snippet languages
+
+  /detection_rules/:
+    get:
+      summary: Get a list of detection rules
+      responses:
+        '200':
+          description: A list of detection rules
+
+  /detection_rule_categories/:
+    get:
+      summary: Get a list of detection rule categories
+      responses:
+        '200':
+          description: A list of detection rule categories

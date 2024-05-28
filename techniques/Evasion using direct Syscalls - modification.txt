@@ -1,0 +1,23 @@
+1 - Authorship information
+
+Kyle Cucci
+@d4rksystem
+https://www.linkedin.com/in/kylecucci/
+
+2 - Title of the techniques to modify
+
+Evasion using direct Syscalls
+
+3 - New Description (if required)
+
+This technique can also be used for sandbox evasion. Some sandboxes log only higher-level WinAPI or NT API calls, but do not monitor or hook syscalls (or sysenters). 
+Sandboxes that are missing these events will not see these calls. 
+To combat this technique, ensure your sandboxes are able to log/hook syscalls and kernel function calls.
+
+ 4 - Code snippet (if you have it)
+
+Nothing more to add. Already covered :)
+
+5 - Detection rules (if you have it)
+
+N/A
