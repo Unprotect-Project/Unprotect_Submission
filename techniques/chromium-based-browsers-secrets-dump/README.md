@@ -71,6 +71,7 @@ cd chromium-based-browsers-secrets-dump
 Run the Project:
 
 ```bash
+cargo add serde_json base64 hex winapi regex rusqlite aes_gcm
 cargo run
 ```
 
