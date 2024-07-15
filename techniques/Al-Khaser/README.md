@@ -13,4 +13,4 @@
 * https://github.com/LordNoteworthy/al-khaser/blob/967afa0d783ff9625caf1b069e3cd1246836b09f/al-khaser/AntiDebug/WriteWatch.cpp#L85
 
 ## Detection rules
-* `al-khaser.yar`
+* `al-khaser_writewatch.yar`
