@@ -1,0 +1,47 @@
+# *NAME OF YOUR TECHNIQUE*
+
+## Authorship information
+* Name or nickname (required): Kyle Cucci
+* Twitter: https://twitter.com/d4rksystem
+* Website: https://securityliterate.com
+* Linkedin: https://www.linkedin.com/in/kylecucci/
+* Email: kyle.cucci@gmail.com
+  
+## Technique Information
+* Technique title (required): NtDelayExecution
+* Technique category (required): Sandbox Evasion / Anti-Debugging
+* Technique description (required): 
+NtDelayExecution can be used to delay the execution of the calling thread. NtDelayExecution accepts a parameter "DelayInterval", which is the number of milliseconds to delay. Once executed, NtDelayExeuction "pauses" execution of the calling program which can cause a timeout of the sandbox or loss of control in a debugger. 
+
+Additionally, some higher level WinAPI functions invoke NtDelayExeuction. For example, the WinAPI function Beep, which plays an audible tone for a specified number of milliseconds, calls into NtDelayExecution. In this manner, malware can invoke the Beep function to similarly cause a delay in the program execution.
+
+## Additional resources
+* http://undocumented.ntinternals.net/index.html?page=UserMode%2FUndocumented%20Functions%2FNT%20Objects%2FThread%2FNtDelayExecution.html
+* https://securityliterate.com/beeeeeeeeep-how-malware-uses-the-beep-winapi-function-for-anti-analysis/
+
+## Code snippets
+Code snippet for NtDelayExecution:
+
+int main() {
+    
+    bool alertable = 0; // Thread alertable state. 0 = thread cannot cannot break on call to NtAlertThread.
+    int duration = 60000; // Duration of the delay in milliseconds
+
+    NtDelayExecution(alertable, duration)
+    return 0;
+}
+
+
+Code snippet for Beep technique:
+
+int main() {
+    
+    int frequency = 0; // Frequency of the beep in hertz (this will likely be "0" if the malware doesn't actually want to invoke the beep sound!) 
+    int duration = 60000; // Duration of the beep in milliseconds
+
+    Beep(frequency, duration)
+    return 0;
+}
+
+## Detection rules
+* This is a work in progress and will be submitted later!
