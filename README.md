@@ -32,6 +32,12 @@ Each submission should include several pieces of information to be reviewed:
 * You can add a small description at the top to mention any specific information such as the library required to run.
 * If you are reusing the code from elsewhere, please add a comment at the beginning of your code that includes the original source.
 
+> ⚠️ We require proper attribution for all code snippets. Copying and pasting code from external sources without crediting the original author is strictly prohibited. If the code snippet comes from a private source, ensure you have prior authorization and still credit the original author.
+
+> If you discover a code snippet that belongs to you and was used without proper credit or authorization, please inform us. We will either credit you or remove the snippet.
+
+> Submitting a code snippet without proper credit or authorization may result in a ban from our contributor program.
+
 ### 4 - Detection Rules (not required but highly recommended)
 The detection rules part is particularly important to help the community defend itself against these techniques. Although it is not always possible to create detection rules, we strongly encourage you to do your best to add them.
 * Yara rules: Please add the Yara rules related to your technique. If it's yours, add your name in the meta, otherwise keep the original authorship.
