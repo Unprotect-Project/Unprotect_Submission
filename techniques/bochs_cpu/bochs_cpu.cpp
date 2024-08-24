@@ -98,28 +98,6 @@ std::string get_brand() {
 }
 
 
-// check AMD
-bool is_amd() {
-    constexpr std::uint32_t amd_ecx = 0x69746e65;
-
-    std::uint32_t unused, ecx = 0;
-    cpuid(unused, unused, ecx, unused, 0);
-
-    return (ecx == amd_ecx);
-}
-
-
-// check Intel
-bool is_intel() {
-    constexpr std::uint32_t intel_ecx1 = 0x6c65746e; // "ntel"
-    constexpr std::uint32_t intel_ecx2 = 0x6c65746f; // "otel", this is because some Intel CPUs have a rare manufacturer string of "GenuineIotel"
-
-    std::uint32_t unused, ecx = 0;
-    cpuid(unused, unused, ecx, unused, 0);
-
-    return ((ecx == intel_ecx1) || (ecx == intel_ecx2));
-}
-
 // main bochs detection code
 bool bochs_cpu() {
     std::uint32_t unused, ecx = 0;
