@@ -103,12 +103,12 @@ bool bochs_cpu() {
     std::uint32_t unused, ecx = 0;
     cpuid(unused, unused, ecx, unused, 0);
 
-    constexpr std::uint32_t amd_ecx    = 0x69746e65; // "cAMD" (AMD)
+    constexpr std::uint32_t amd_ecx    = 0x444d4163; // "cAMD" (AMD)
     constexpr std::uint32_t intel_ecx1 = 0x6c65746e; // "ntel" (Intel)
     constexpr std::uint32_t intel_ecx2 = 0x6c65746f; // "otel" (Intel), this is because some Intel CPUs have a rare manufacturer string of "GenuineIotel"
 
     const bool intel = ((ecx == intel_ecx1) || (ecx == intel_ecx2));
-    const bool amd = (ecx = amd_ecx);
+    const bool amd = (ecx == amd_ecx);
 
     // if neither amd or intel, return false
     if (!(intel || amd)) {
