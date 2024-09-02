@@ -140,7 +140,7 @@ bool bochs_cpu() {
         constexpr std::uint8_t AMD_K7 = 6;
         constexpr std::uint8_t AMD_K8 = 15;
 
-        auto is_k7 = [](const u32 eax) -> bool {
+        auto is_k7 = [](const std::uint32_t eax) -> bool {
             const std::uint32_t family = (eax >> 8) & 0xF;
             const std::uint32_t model = (eax >> 4) & 0xF;
             const std::uint32_t extended_family = (eax >> 20) & 0xFF;
@@ -154,7 +154,7 @@ bool bochs_cpu() {
             return false;
         };
 
-        auto is_k8 = [](const u32 eax) -> bool {
+        auto is_k8 = [](const std::uint32_t eax) -> bool {
             const std::uint32_t family = (eax >> 8) & 0xF;
             const std::uint32_t extended_family = (eax >> 20) & 0xFF;
 
