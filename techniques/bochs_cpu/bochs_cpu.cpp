@@ -158,6 +158,8 @@ bool bochs_cpu() {
                     return true;
                 }
             }
+
+            return false;
         };
 
         if (!(is_k7(eax) || is_k8(eax))) {
