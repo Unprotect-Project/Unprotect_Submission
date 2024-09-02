@@ -59,16 +59,15 @@ void cpuid(
 #endif
 }
 
+// checks if the leaf is high enough for the CPU to support
+bool is_leaf_supported(const std::uint32_t p_leaf) {
+    std::uint32_t eax, unused = 0;
+    cpuid(eax, unused, unused, unused, 0x80000000);
+    return (p_leaf <= eax);
+};
 
 // get the CPU product
 std::string get_brand() {
-    // checks if the leaf is high enough for the CPU to support
-    auto is_leaf_supported = [&](const std::uint32_t p_leaf) -> bool {
-        std::uint32_t eax, unused = 0;
-        cpuid(eax, unused, unused, unused, 0x80000000);
-        return (p_leaf <= eax);
-    };
-
     if (!is_leaf_supported(0x80000004)) {
         return "";
     }
@@ -129,20 +128,51 @@ bool bochs_cpu() {
         }
 
         // technique 3: Check for absence of AMD easter egg for K7 and K8 CPUs
+        constexpr std::uint32_t AMD_EASTER_EGG = 0x8fffffff; // this is the CPUID leaf of the AMD easter egg
+
+        if (!is_leaf_supported(AMD_EASTER_EGG)) {
+            return false;
+        }
+
         std::uint32_t unused, eax = 0;
         cpuid(eax, unused, unused, unused, 1);
 
         constexpr std::uint8_t AMD_K7 = 6;
         constexpr std::uint8_t AMD_K8 = 15;
 
-        const std::uint32_t family = ((eax >> 8) & 0xF);
+        auto is_k7 = [](const std::uint32_t eax) -> bool {
+            const std::uint32_t family = (eax >> 8) & 0xF;
+            const std::uint32_t model = (eax >> 4) & 0xF;
+            const std::uint32_t extended_family = (eax >> 20) & 0xFF;
 
-        if (family != AMD_K7 && family != AMD_K8) {
+            if (family == 6 && extended_family == 0) {
+                if (model == 1 || model == 2 || model == 3 || model == 4) {
+                    return true;
+                }
+            }
+
+            return false;
+        };
+
+        auto is_k8 = [](const std::uint32_t eax) -> bool {
+            const std::uint32_t family = (eax >> 8) & 0xF;
+            const std::uint32_t extended_family = (eax >> 20) & 0xFF;
+
+            if (family == 0xF) {
+                if (extended_family == 0x00 || extended_family == 0x01) {
+                    return true;
+                }
+            }
+
+            return false;
+        };
+
+        if (!(is_k7(eax) || is_k8(eax))) {
             return false;
         }
 
         std::uint32_t ecx_bochs = 0;
-        cpuid(unused, unused, ecx_bochs, unused, 0x8fffffff); // AMD easter egg leaf 
+        cpuid(unused, unused, ecx_bochs, unused, AMD_EASTER_EGG);
 
         if (ecx_bochs == 0) {
             return true;
