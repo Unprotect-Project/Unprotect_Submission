@@ -6,7 +6,6 @@
 ; This code demonstrates a technique to confuse disassemblers by manipulating
 ; the return pointer and using RET instructions in unexpected ways.
 ;
-
 ; How it works:
 ; 1. The code starts with a normal function call to establish legitimacy
 ; 2. Then it abuses the return pointer by:
