@@ -1,9 +1,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Anti-Disassembly Technique: Abusing the Return Pointer
-;
+; Programming Language: ASM
+; Existing Technique Name: Abusing the Return Pointer
+; Existing Technique URL: https://unprotect.it/technique/abusing-the-return-pointer/
 ; This code demonstrates a technique to confuse disassemblers by manipulating
 ; the return pointer and using RET instructions in unexpected ways.
 ;
+
 ; How it works:
 ; 1. The code starts with a normal function call to establish legitimacy
 ; 2. Then it abuses the return pointer by:
