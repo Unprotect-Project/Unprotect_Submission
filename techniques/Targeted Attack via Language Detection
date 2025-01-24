@@ -1,0 +1,71 @@
+Technique Name: Targeted Attack via Language Detection
+Author Information :
+
+Nickname: Malfav.win32
+First Name: Diyar
+Last Name: Saadi
+Email: Optional
+Website: https://malfav.gitbook.io/home
+GitHub: Optional
+Twitter: Optional
+LinkedIn: Diyar Saadi
+Technique Information
+Technique Category: Targeted Attack
+
+Technique Tags: Language Detection, API, Targeted Attack .
+
+Technique General Detail:
+
+This technique can be used in targeted attacks to detect the system's language settings and adjust the behavior of the malware based on the environment. By querying language-related information via Windows API functions, attackers can customize their payloads based on the detected locale, making their attack more context-aware and potentially avoiding detection or responding differently depending on the target region. The following API functions are used for this purpose:
+
+**GetUserDefaultUILanguage()
+GetSystemDefaultUILanguage()
+GetUserDefaultLangID()**
+Example Use Case: Attackers may choose to deploy different behaviors for systems based on their language setting, for instance, targeting specific regions with tailored payloads or avoiding triggering security mechanisms in different localities.
+
+Platform Specific Details
+@Windows:
+
+This technique is designed for Windows-based systems. The functions GetUserDefaultUILanguage(), GetSystemDefaultUILanguage(), and GetUserDefaultLangID() are native to the Windows API and provide information about the system's default language and locale settings. Attackers can use this data to modify the attack’s behavior based on language-specific details, such as cultural context, geographic targeting, or even bypassing certain regional defenses.
+
+Additional Resources:
+
+You can refer to the official Microsoft documentation for these functions:
+
+GetUserDefaultUILanguage function: https://learn.microsoft.com/en-us/windows/win32/api/winnls/nf-winnls-getuserdefaultuilanguage
+GetSystemDefaultUILanguage function: https://learn.microsoft.com/en-us/windows/win32/api/winnls/nf-winnls-getsystemdefaultuilanguage
+GetUserDefaultLangID function: https://learn.microsoft.com/en-us/windows/win32/api/winnls/nf-winnls-getuserdefaultlangid
+Code Snippet
+
+Code Snippet Information:
+
+Code Snippet Author: Malfav.win32
+Programming Language: Python
+Existing Technique Name: Targeted Attack via Language Detection
+
+import ctypes
+from ctypes import wintypes
+
+kernel32 = ctypes.WinDLL('kernel32')
+
+GetUserDefaultUILanguage = kernel32.GetUserDefaultUILanguage
+GetUserDefaultUILanguage.restype = wintypes.UINT
+
+GetSystemDefaultUILanguage = kernel32.GetSystemDefaultUILanguage
+GetSystemDefaultUILanguage.restype = wintypes.UINT
+
+GetUserDefaultLangID = kernel32.GetUserDefaultLangID
+GetUserDefaultLangID.restype = wintypes.UINT
+
+user_default_ui_lang = GetUserDefaultUILanguage()
+system_default_ui_lang = GetSystemDefaultUILanguage()
+user_default_lang_id = GetUserDefaultLangID()
+
+print(f"User Default UI Language: {user_default_ui_lang}")
+print(f"System Default UI Language: {system_default_ui_lang}")
+print(f"User Default Lang ID: {user_default_lang_id}")
+
+if user_default_ui_lang != system_default_ui_lang:
+print("Targeted attack behavior: Custom actions based on locale or region.")
+else:
+print("Targeted attack behavior: Standard attack mode.")
