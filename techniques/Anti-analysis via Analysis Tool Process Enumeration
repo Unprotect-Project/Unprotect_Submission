@@ -1,0 +1,54 @@
+Technique Name: Anti-analysis via Analysis Tool Process Enumeration
+
+Author Information:
+
+-Nickname: Malfav.Win32
+-First Name: Diyar
+-Last Name: Saadi
+-Website: malfav.gitbook.io/home
+-GitHub: github.com/malfav
+-LinkedIn: Diyar Saadi
+
+Technique Information:
+
+Technique Category: Defense Evasion
+Technique Tags: Anti-analysis, Debugger Detection, Reverse Engineering Prevention
+
+Technique General Detail:
+
+This technique is used by malware to detect the presence of debugging, monitoring, or reverse engineering tools by scanning active processes. If any known security analysis tools are detected, the malware can modify its behavior, terminate execution, or employ countermeasures to evade analysis.
+
+Additional Resources :  https://github.com/mandiant/capa-rules/blob/master/anti-analysis/reference-analysis-tools-strings.yml
+
+Code Snippet Information :
+
+-Code Snippet Author: Malfav.Win32
+-Programming Language: Python
+
+import psutil
+import sys
+
+# List of common analysis tools used by security researchers
+analysis_tools = [
+    "ollydbg.exe", "ProcessHacker.exe", "tcpview.exe", "autoruns.exe",
+    "autorunsc.exe", "filemon.exe", "procmon.exe", "regmon.exe", "procexp.exe",
+    "ida.exe", "ida64.exe", "ImmunityDebugger.exe", "Wireshark.exe",
+    "dumpcap.exe", "HookExplorer.exe", "ImportREC.exe", "PETools.exe",
+    "LordPE.exe", "SysInspector.exe", "proc_analyzer.exe", "sysAnalyzer.exe",
+    "sniff_hit.exe", "windbg.exe", "joeboxcontrol.exe", "joeboxserver.exe",
+    "ResourceHacker.exe", "x32dbg.exe", "x64dbg.exe", "Fiddler.exe",
+    "httpdebugger.exe", "fakenet.exe", "netmon.exe", "WPE PRO.exe",
+    "decompile.exe", "scylla.exe", "megadumper.exe"
+]
+
+def detect_analysis_tools():
+    for proc in psutil.process_iter(attrs=['pid', 'name']):
+        try:
+            if proc.info['name'].lower() in analysis_tools:
+                print(f"Detected analysis tool: {proc.info['name']}. Exiting...")
+                sys.exit(1)  # Exit execution to evade analysis
+        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+            continue
+
+if __name__ == "__main__":
+    detect_analysis_tools()
