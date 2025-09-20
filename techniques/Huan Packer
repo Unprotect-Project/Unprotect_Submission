@@ -1,0 +1,56 @@
+# Technique Name: Huan Packer
+
+## Author Information
+
+- Nickname: **Malfav.Win32**
+- First Name: Diyar
+- Last Name: Saadi
+- Website: malfav.gitbook.io/home
+- GitHub: github.com/malfav
+- LinkedIn: Diyar Saadi
+
+## Technique Information
+
+- Technique Category: Packers
+- Technique Tags: Huan, Software Packing, Defense Evasion
+- Technique General Detail:
+
+```
+Huan is a software packer designed to obfuscate binary files and evade static analysis techniques. By modifying headers, sections, and import tables, it complicates reverse engineering efforts. The packer introduces custom relocations and dynamically fixes the Import Address Table (IAT) at runtime.
+```
+
+## Additional Resources:
+
+- Huan GitHub Repository: github.com/frkngksl/Huan
+- Mandiant CAPA Rule: github.com/mandiant/capa-rules/blob/master/anti-analysis/packer/huan/packed-with-huan.yml
+
+# Detection Rule Information
+
+- Detection Rule Author: **Malfav.Win32** (If not specified in rule metadata)
+- Rule Type: **YARA**
+
+# Rule Plain Text
+
+```
+rule huan_packer 
+{
+  meta:
+    name = "packed with Huan"
+    namespace = "anti-analysis/packer/huan"
+    author = "Malfav.Win32"
+    att&ck = "Defense Evasion::Obfuscated Files or Information::Software Packing [T1027.002]"
+    mbc = "Anti-Static Analysis::Software Packing [F0001]"
+    reference = "github.com/frkngksl/Huan"
+  strings:
+    $s1 = "[+] IAT Fix starts..."
+    $s2 = "     [+] Import by ordinal: "
+    $s3 = "     [+] Import by name: "
+    $s4 = "[!] There is a problem in relocation directory"
+    $s5 = "[!] No Relocation Table and Cannot load to the preferable address"
+    $s6 = "[+] All headers are copied"
+    $s7 = "[+] All sections are copied"
+  condition:
+    any of ($s*)
+}
+```
+
